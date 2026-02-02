@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { toast } from 'sonner';
 import { Shield, Key, Loader2, Lock, Eye, EyeOff } from 'lucide-react';
+import superProgrammatoreLogo from '@/assets/super-programmatore-logo.png';
 
 
 const AccessGate: React.FC = () => {
@@ -44,13 +45,17 @@ const AccessGate: React.FC = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background p-4">
       <div className="w-full max-w-md space-y-6">
+        {/* Logo */}
+        <div className="flex justify-center mb-2">
+          <img 
+            src={superProgrammatoreLogo} 
+            alt="Super Programmatore Logo" 
+            className="w-64 h-auto max-w-full"
+          />
+        </div>
+
         {/* Header */}
         <div className="text-center">
-          <div className="mb-4 flex justify-center">
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-warning/20 float-animation">
-              <Shield className="h-8 w-8 text-warning" />
-            </div>
-          </div>
           <h1 className="text-3xl font-bold text-gradient-primary">ProgressVault</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             Inserisci il codice di accesso per continuare
